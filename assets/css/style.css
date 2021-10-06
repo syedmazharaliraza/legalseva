@@ -1,15 +1,49 @@
-body {
+body,html {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* Pre Defined */
+
+.container {
+    width: 100%;
+    padding: 0 0;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+}
+
+.sectionTitle {
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: 4px solid #BE9B49;
+    font-size: 40px;
+    padding-bottom: 10px;
+    margin-top: 80px;
+}
+
+/* Header */
 header .carousel-inner .item {
     height: 100vh;
+}
+
+
+.block {
+    background-color: #04070E;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 46px 0 rgb(17 59 60 / 50%);
+}
+
+#navbar {
+    width: 100%;
+    padding: 0 30px;
 }
 
 .navbar-inverse {
     background-color: transparent;
     border-color: transparent;
-    position: absolute;
 }
 
 .navbar-inverse .navbar-brand {
@@ -18,7 +52,6 @@ header .carousel-inner .item {
     padding: 22px 15px;
     font-weight: 600;
 }
-
 
 .navbar-brand img {
     height: 50px;
@@ -34,6 +67,7 @@ header .carousel-inner .item {
     color: #fff;
     text-transform: uppercase;
 }
+
 .navbar-inverse .navbar-nav>li>a:hover {
     color: #BE9B49;
     transform: scale(120%);
@@ -90,10 +124,56 @@ header .carousel-inner .item {
     border-color: #BE9B49;
 }
 
-.cont {
-    height: 100vh;
-    width: 100%;
+/* Services */
+
+.services {
+    background: #f1f1f1;
+    text-align: center;
+    height: fit-content;
+    padding: 0 20px;
 }
+
+.service-cont {
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.service {
+    display: inline-block;
+    width: calc(100% / 3);
+    margin: 20px -2px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.service:hover {
+    background: #ddd;
+}
+
+.service i {
+    color: #BE9B49;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.service h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.service p {
+    color: gray;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 33px;
+}
+
+
 
 /*responsive css*/
 
@@ -114,9 +194,19 @@ header .carousel-inner .item {
     }
 }
 
+@media only screen and (max-width: 780px) {
+    .navbar-inverse .navbar-brand {
+        font-size: 25px;
+        padding: 30px 15px;
+    }
+    .service {
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .navbar-inverse .navbar-brand {
-        font-size: 29px;
+        font-size: 28px;
         padding: 20px 15px;
     }
     .navbar-collapse {
@@ -133,5 +223,18 @@ header .carousel-inner .item {
     }
     .carousel-caption a {
         padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-inverse .navbar-brand {
+        font-size: 26px;
+        padding: 20px 0px;
+    }
+    .navbar-toggle {
+        margin-right: 0;
+    }
+    .service {
+        width: 100%;
     }
 }
