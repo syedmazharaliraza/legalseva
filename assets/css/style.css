@@ -277,7 +277,7 @@ header .carousel-inner .item {
 .test .carousel {
     width: 90%;
     margin: 50px auto;
-    padding: 0 70px;
+    padding: 0 50px;
 }
 
 .test .carousel-item {
@@ -328,7 +328,7 @@ header .carousel-inner .item {
 }
 
 .test .carousel-control i {
-    font-size: 68px;
+    font-size: 40px;
     line-height: 42px;
     position: absolute;
     display: inline-block;
@@ -671,6 +671,9 @@ header .carousel-inner .item {
     .service {
         width: 100%;
     }
+    .service p{
+        line-height: 28px;
+    }
     .test .carousel-item {
         font-size: 15px;
         line-height: 23px;
@@ -679,18 +682,18 @@ header .carousel-inner .item {
         height: 100px;
         width: 100px;
     }
-    .profile p {
-        text-align: center;
-        margin: 20px 60px 80px 60px;
-        font-size: 20px;
+    .profile .profile-img{
+       height: 150px;
+       width: 150px;
     }
     .profile p {
         text-align: center;
         margin: 12px 60px 35px 60px;
         font-size: 18px;
     }
-    .contact-cont .sectionTitle {
+    .sectionTitle {
         font-size: 30px;
+        margin-top: 50px;
     }
     .contact-cont .watermark {
         height: 300px;
