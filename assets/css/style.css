@@ -11,14 +11,16 @@ body, html {
 }
 
 .section {
+    text-align: center;
     height: 100vh;
     width: 100%;
+    background: #f1f1f1;
+    height: fit-content;
 }
 
 .sectionTitle {
     display: inline-block;
     text-transform: uppercase;
-    text-align: center;
     border-bottom: 4px solid #BE9B49;
     font-size: 40px;
     padding-bottom: 10px;
@@ -26,6 +28,7 @@ body, html {
 }
 
 /* Splash/Loader Screen */
+
 .intro-cont {
     position: fixed;
     z-index: 9999;
@@ -41,7 +44,7 @@ body, html {
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #fff;
     font-size: 50px;
     font-weight: 500;
@@ -86,7 +89,6 @@ body, html {
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
-
 
 /* Header */
 
@@ -193,9 +195,6 @@ header .carousel-inner .item {
 /* Services */
 
 .services {
-    background: #f1f1f1;
-    text-align: center;
-    height: fit-content;
     padding: 30px 20px;
 }
 
@@ -233,7 +232,7 @@ header .carousel-inner .item {
 }
 
 .service p {
-    color: gray;
+    color: rgb(114, 113, 113);
     font-size: 18px;
     font-weight: 350;
     line-height: 33px;
@@ -249,8 +248,9 @@ header .carousel-inner .item {
     text-align: center;
     height: fit-content;
     min-height: 100vh;
-    padding: 50px 0 0 0;
+    padding: 30px 0 0 0;
 }
+
 .test .row {
     margin: 0;
 }
@@ -258,7 +258,6 @@ header .carousel-inner .item {
 .test h2 {
     color: rgb(255, 255, 255);
 }
-
 
 .test .col-center {
     margin: 0 auto;
@@ -348,11 +347,79 @@ header .carousel-inner .item {
     box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* Attorney */
+
+#attorney .sectionTitle {
+    margin: 100px 0 50px 0;
+}
+
+.attorney-cont {
+    margin: 20px 40px;
+    color: white;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.profile {
+    flex-basis: 260px;
+    margin: 20px 20px;
+}
+
+.profile .profile-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.profile:hover .profile-img {
+    filter: grayscale(0);
+}
+
+.user-name {
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.profile h5 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #be9b49;
+}
+
+.profile p {
+    color: rgb(114, 113, 113);
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
 /*responsive css*/
 
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
     #header .carousel-caption h2 {
         font-size: 50px;
+    }
+    .profiles {
+        flex-direction: column;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile p {
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 20px;
     }
 }
 
@@ -364,6 +431,12 @@ header .carousel-inner .item {
     .navbar-inverse .navbar-brand {
         font-size: 29px;
         padding: 30px 15px;
+    }
+    .profiles {
+        margin: 20px 0;
+    }
+    .profile p {
+        margin: 20px 10px 80px 10px;
     }
 }
 
@@ -416,7 +489,6 @@ header .carousel-inner .item {
         font-size: 20px;
         font-weight: 200;
     }
-
     .navbar-inverse .navbar-brand {
         font-size: 26px;
         padding: 20px 0px;
@@ -427,7 +499,7 @@ header .carousel-inner .item {
     .service {
         width: 100%;
     }
-    .test .carousel-item {  
+    .test .carousel-item {
         font-size: 15px;
         line-height: 23px;
     }
